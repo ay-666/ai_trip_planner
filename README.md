@@ -12,7 +12,7 @@ AI Trip Planner is a web application that helps users create personalized travel
 - Real-time travel information and recommendations via the Gemini  and Google Place API.
 - Authentication and data storage using Firebase.
 
-![My Trip Preview](./resources/view_trip.png)
+![My Trip Preview](./resources/my_trips.png)
 
 ## Tech Stack
 
