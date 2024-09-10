@@ -2,6 +2,8 @@
 
 AI Trip Planner is a web application that helps users create personalized travel itineraries based on their preferences, utilizing React, Tailwind CSS, Firebase, the Gemini API and Google place API for real-time travel information.
 
+![Trip Planner Preview](./resources/view_trip.png)
+
 ## Features
 
 - AI-powered trip recommendations based on user preferences.
@@ -9,6 +11,8 @@ AI Trip Planner is a web application that helps users create personalized travel
 - Responsive design with Tailwind CSS for optimal viewing across devices.
 - Real-time travel information and recommendations via the Gemini  and Google Place API.
 - Authentication and data storage using Firebase.
+
+![My Trip Preview](./resources/view_trip.png)
 
 ## Tech Stack
 
