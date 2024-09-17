@@ -7,8 +7,8 @@ const HeroSection = () => {
     const navigate = useNavigate();
 
   return (
-    <div className='mt-8 flex flex-col items-center mx-auto gap-10 p-4'>
-        <h1 className='font-bold text-[50px] mt-8'>
+    <div className='sm:mt-8 flex flex-col items-center mx-auto gap-10 p-4 scale-90 sm:scale-100'>
+        <h1 className='font-bold text-[50px] sm:mt-8'>
             <span className='text-[#f56551] text-center'>Discover Your Next Adventure with AI:</span>
             <p className=' text-center'>Personalize Itineraries at Your Fingertips.</p>
         </h1>

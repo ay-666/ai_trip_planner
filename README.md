@@ -87,7 +87,7 @@ To set up Firebase for authentication and data storage:
 
 ## Live Demo
 
-Check out the live demo: [AI Trip Planner Live](https://ai-trip-planner-demo.com/)
+Check out the live demo: [AI Trip Planner Live](https://ai-trip-planner-fhg8.onrender.com/)
 
 ## Contributing
 

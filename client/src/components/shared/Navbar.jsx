@@ -17,17 +17,17 @@ import { USER_API_ENDPOINT } from '@/utils/constants';
 
 
 const Navbar = () => {
-  const [profilePic,setProfilePic] = useState();
+  const [profilePic, setProfilePic] = useState();
   const user = JSON.parse(localStorage.getItem('user'));
   const [localUser, setLocalUser] = useState();
   const [openDialog, setOpenDialog] = useState(false);
 
   const navigate = useNavigate();
   useEffect(() => {
-    if(user){
+    if (user) {
       setProfilePic(user?.picture);
     }
-  }, [user,localUser])
+  }, [user, localUser])
 
 
   const logoutHandler = async () => {
@@ -82,27 +82,29 @@ const Navbar = () => {
   }
 
   return (
-    <div className='p-4 shadow-sm flex justify-between items-center px-5'>
-      <img src={logo} alt="logo" />
+    <div className='p-4 shadow-sm flex justify-between items-center '>
+      <img src={logo} alt="logo" className='scale-75 sm:scale-100' />
       {user ? <div className='flex items-center gap-3'>
-        <Button onClick= {()=>{navigate('/create-trip')}} variant="outline" className="rounded-full">+ Create trip</Button>
-        <Button onClick= {()=>{navigate('/my-trips')}} variant="outline" className="rounded-full">My trip</Button>
+        <Button onClick={() => { navigate('/create-trip') }} variant="outline" className="hidden sm:block rounded-full ">+ Create trip</Button>
+        <Button onClick={() => { navigate('/my-trips') }} variant="outline" className="hidden sm:block rounded-full">My trip</Button>
 
-        <Popover>
+        <Popover className="">
           <PopoverTrigger><img src={profilePic} alt="profile_pic" className='w-8 rounded-full' /></PopoverTrigger>
-          <PopoverContent className=" mx-4 my-2">
+          <PopoverContent className="flex flex-col w-40 mx-2 my-2 ">
+            <Button onClick={() => { navigate('/create-trip') }} variant="link" className=" sm:hidden  ">+ Create trip</Button>
+            <Button onClick={() => { navigate('/my-trips') }} variant="link" className=" sm:hidden ">My trip</Button>
             <Button onClick={logoutHandler} variant="link" className='text-md'><LogOut className='w-5 text-center mr-1' /> Logout</Button>
           </PopoverContent>
         </Popover>
       </div>
         : <div>
-          <Button onClick={()=>{
+          <Button className="scale-75 sm:scale-100" onClick={() => {
             setOpenDialog(true);
           }}>Sign In</Button>
 
         </div>}
-      <Dialog open={openDialog} onOpenChange={setOpenDialog}>
-        <DialogContent>
+      <Dialog className="" open={openDialog} onOpenChange={setOpenDialog}>
+        <DialogContent className="scale-90 sm:scale-100">
           <DialogHeader>
             <DialogTitle>
               <img src={logo} alt='logo' />

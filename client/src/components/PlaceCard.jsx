@@ -35,12 +35,12 @@ const PlaceCard = ({ place, location }) => {
                 </div>
 
                 :
-                <div>
+                <div className=''>
                     <h2 className='font-medium text-sm text-orange-400'>{place?.time}</h2>
                     <div onClick={() => { window.open(window.open(`https://www.google.com/maps/search/?api=1&query=${place?.place},${location}`, '_blank')) }}
                         className='flex gap-5 mt-2 border rounded-lg p-3 hover:scale-105 transition-all hover:shadow-md cursor-pointer'>
-                        <img src={photoURL} alt="place_img" className='rounded-xl w-32 h-32 object-cover' />
-                        <div className='flex flex-col justify-around'>
+                        <img src={photoURL} alt="place_img" className='rounded-xl w-32 h-32 object-cover scale-90 sm:scale-100' />
+                        <div className='flex flex-col justify-around scale-90 sm:scale-100 flex-wrap'>
                             <h2 className='font-bold '>{place?.place}</h2>
                             <h2 className='text-sm text-gray-400'>{place?.details}</h2>
                             <div className='flex items-baseline gap-2'><span className='text-sm'>Ticket Pricing:</span><span className='text-sm font-medium text-green-500'>{place?.ticket_pricing}</span></div>

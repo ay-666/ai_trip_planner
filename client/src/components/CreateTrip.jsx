@@ -163,8 +163,8 @@ const CreateTrip = () => {
             <Navbar />
 
             <div className=' sm:px-10 md:px-32 lg:px-56 xl:px-72 px-5 mt-10 mx-auto '>
-                <h2 className='font-bold text-3xl'>Tell us your travel preference 🏕️</h2>
-                <p className='mt-3 text-gray-500 text-xl'>Just provide some basic information, and our trip will generate customized itinerary based on your preferences.</p>
+                <h2 className='font-bold text-2xl sm:text-3xl'>Tell us your travel preference 🏕️</h2>
+                <p className='mt-3 text-gray-500 sm:text-lg'>Just provide some basic information, and our trip will generate customized itinerary based on your preferences.</p>
 
                 <div className='mt-20 flex flex-col gap-10'>
                     <div>
@@ -191,7 +191,7 @@ const CreateTrip = () => {
 
                     <div>
                         <h2 className='text-xl font-bold my-4 '>What's your Budget?</h2>
-                        <div className='grid grid-cols-3 gap-5 mt-5'>
+                        <div className='grid grid-cols-2 sm:grid-cols-3 gap-5 mt-5'>
                             {SelectBudgetOptions.map((item, index) => {
                                 return (<div onClick={() => { handleInputChange('budget', item.title) }} className={`p-4 border hover:shadow-lg rounded-lg flex flex-col gap-2 cursor-pointer ${formData?.budget === item.title && 'shadow-lg border-black'}`} key={index}>
                                     <h2 className='text-4xl'>{item.icon}</h2>
@@ -207,7 +207,7 @@ const CreateTrip = () => {
                     </div>
                     <div>
                         <h2 className='text-xl font-bold my-4 '>Who do you plan to travel with?</h2>
-                        <div className='grid grid-cols-3 gap-5 mt-5'>
+                        <div className='grid grid-cols-2 sm:grid-cols-3 gap-5 mt-5'>
                             {SelectTravelList.map((item, index) => {
                                 return (<div onClick={() => { handleInputChange('people', `${item.title} with group size ${item.people}`) }} className={`p-4 border hover:shadow-lg rounded-lg flex flex-col gap-2 cursor-pointer ${formData?.people?.includes(item.title) && 'shadow-lg border-black'}`} key={index}>
                                     <h2 className='text-4xl'>{item.icon}</h2>
